@@ -151,14 +151,14 @@ You can check if the packets are injected by looking at the `airodump-ng` screen
 
 ### Run aircrack-ng to obtain the WPA key
 
-At this point, you should be able to obtain the WPA key from the initialization vectors gathered in the previous steps.
+At this point, you should be able to obtain the WPA key from the initialization vectors gathered in the previous steps. To perform this attack you need a wordlist and if the network password is not in the wordfile you will not crack the password.
 Open another console session and type:
 
 ```
-# aircrack-ng -b 08:00:BF:E6:31:2E -w wordlist.txt output*.cap
+# aircrack-ng -a2 -b 08:00:BF:E6:31:2E -w wordlist.txt output*.cap
 ```
 
-where `-w wordlist.txt` refers to your own dictionary wordlist and `output*.cap` selects all output files with `.cap` extension.
+where `-a2` specifies the attack mode for WPA/WPA2-PSK,  `-w wordlist.txt` refers to your own dictionary wordlist, and `output*.cap` selects all output files with `.cap` extension.
 
 This is the output of a successful attack:
 
