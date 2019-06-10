@@ -181,10 +181,10 @@ Transient Key  : 86 D0 43 C9 AA 47 F8 03 2F 71 3F 53 D6 65 F3 F3
 EAPOL HMAC     : 8E 52 1B 51 E8 F2 7E ED 95 F4 CF D2 C6 D0 F0 68
 ```
 
-### Disclaimer
-
-This tutorial has been made for educational purposes only, I don't promote malicious practices and I will not be responsible for any illegal activities.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This tutorial has been made for educational purposes only, I don't promote malicious practices and I will not be responsible for any illegal activities.
