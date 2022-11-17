@@ -152,7 +152,8 @@ You can check if the packets are injected by looking at the `airodump-ng` screen
 
 ### Run aircrack-ng to obtain the WPA key
 
-At this point, you should be able to obtain the WPA key from the initialization vectors gathered in the previous steps. To perform this attack you need a wordlist and if the network password is not in the wordfile you will not crack the password.
+At this point, you should be able to obtain the WPA key from the initialization vectors gathered in the previous steps. To perform this attack you need a wordlist and if the network password is not in the wordfile you will not crack the password. Note that most WPA/WPA2 routers come with strong 12 character random passwords that many users (rightly) leave unchanged. If you are attempting to crack one of these passwords, I recommend using the [WPA-length password lists](https://github.com/david-palma/wordlists#passwords-with-wpa-length).
+
 Open another console session and type:
 
 ```ShellSession
@@ -183,6 +184,7 @@ EAPOL HMAC     : 8E 52 1B 51 E8 F2 7E ED 95 F4 CF D2 C6 D0 F0 68
 ```
 
 ## List of commands
+
 Below you can find the list of all of the commands needed to crack a WPA/WPA2 network.
 
 ```
